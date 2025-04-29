@@ -7,6 +7,6 @@ basic.forever(function () {
 })
 loops.everyInterval(900000, function () {
     if (fwdSensors.soilMoisture1.fwdIsMoistureLevelPastThreshold(5, fwdSensors.ThresholdDirection.Under)) {
-        fwdMotors.pump.fwdSetActive(true)
+        fwdMotors.pump.fwdTimedRun(7000)
     }
 })
